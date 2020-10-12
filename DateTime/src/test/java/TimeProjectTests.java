@@ -128,6 +128,18 @@ public class TimeProjectTests {
     }
 
     @Test
+    public void lowerCaseTet() {
+        try {
+            TimeProject testBoundaryValue2 = new TimeProjImpl();
+            String returnValue = testBoundaryValue2.addMinToTime("11:00 pm", 120);
+            System.out.println("New value " + returnValue);
+            assert returnValue.equals("1:00 AM");
+        } catch (Throwable e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Test
     public void malformedRequest() {
         TimeProject malformedRequest = new TimeProjImpl();
         try {

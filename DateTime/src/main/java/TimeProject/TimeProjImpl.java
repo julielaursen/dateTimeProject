@@ -8,7 +8,7 @@ public class TimeProjImpl implements TimeProject {
 
     public String timeFormat = "12:00 AM";
 
-    Pattern pattern = Pattern.compile("([0-12]|[1-9]):([0-5][0-9])\\s[A-Z][A-Z]");
+    Pattern pattern = Pattern.compile("([0-12]|[1-9]):([0-5][0-9])\\s[A-Za-z][A-Za-z]");
     Matcher timeMatcher = pattern.matcher(timeFormat);
 
     private String displayTime;
